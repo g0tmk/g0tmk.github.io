@@ -13,8 +13,7 @@ cover:
     hiddenInSingle: false
 ---
 
-
-This site is generated using [Hugo](https://gohugo.io/). Configuration is done using yaml and posts are markdown files. Very simple and easy to track in git.
+This site is generated using [Hugo][hugo]. Configuration is done using yaml and posts are markdown files. Very simple and easy to track in git.
 
 ## Create a blank site
 
@@ -44,7 +43,7 @@ This site is generated using [Hugo](https://gohugo.io/). Configuration is done u
     git submodule update --init --recursive
     ```
 
-1. Replace your existing config.yaml with boilerplate from [the PaperMod wiki](https://github.com/adityatelange/hugo-PaperMod/wiki/Installation#sample-configyml)
+1. Replace your existing config.yaml with boilerplate from [the PaperMod wiki][papermod-wiki].
 
 1. Create a new post
 
@@ -72,7 +71,7 @@ Note that there are two URL formats for GitHub Pages:
 
 If you want to use the first format, the repository you create on GitHub must be named `<username>.github.io`.
 
-Follow the guide on [the Hugo website](https://gohugo.io/hosting-and-deployment/hosting-on-github/) to set up GitHub Pages.
+Follow [this guide on the Hugo website][hugo-gh] to set up GitHub Pages.
 
 ## Maintenence
 
@@ -81,3 +80,10 @@ Follow the guide on [the Hugo website](https://gohugo.io/hosting-and-deployment/
     ```bash
     git submodule update --remote --merge
     ```
+
+
+<!-- references -->
+[hugo]: https://gohugo.io/ "Hugo"
+[papermod-wiki]: https://github.com/adityatelange/hugo-PaperMod/wiki/Installation#sample-configyml "PaperMod Wiki"
+[hugo-gh]: https://gohugo.io/hosting-and-deployment/hosting-on-github/ "Hugo GitHub Pages"
+
