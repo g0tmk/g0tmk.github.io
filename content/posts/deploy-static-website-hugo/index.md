@@ -81,8 +81,7 @@ Follow [this guide on the Hugo website][hugo-gh] to set up GitHub Pages.
     git submodule update --remote --merge
     ```
 
-
-
+<!-- links -->
 [hugo]: https://gohugo.io/ "Hugo"
 [papermod-wiki]: https://github.com/adityatelange/hugo-PaperMod/wiki/Installation#sample-configyml "PaperMod Wiki"
 [hugo-gh]: https://gohugo.io/hosting-and-deployment/hosting-on-github/ "Hugo GitHub Pages"
