@@ -3,7 +3,7 @@ title: "Build a DIY network attached storage with ZFS and Debian"
 description: ""
 tags: [zfs, debian, nas, nfs]
 date: 2024-03-20T21:26:21-07:00
-draft: true
+draft: false
 author: "g0tmk"
 cover:
     image: "<image path/url>" # image path/url
