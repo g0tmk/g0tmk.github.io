@@ -1,7 +1,7 @@
 ---
 title: "Deploy a static website with Hugo"
 description: ""
-tags: [hugo, web]
+tags: [hugo, web, github]
 date: 2024-03-16T23:43:14-07:00
 draft: false
 author: "g0tmk"
@@ -82,7 +82,7 @@ Follow [this guide on the Hugo website][hugo-gh] to set up GitHub Pages.
     ```
 
 
-<!-- references -->
+
 [hugo]: https://gohugo.io/ "Hugo"
 [papermod-wiki]: https://github.com/adityatelange/hugo-PaperMod/wiki/Installation#sample-configyml "PaperMod Wiki"
 [hugo-gh]: https://gohugo.io/hosting-and-deployment/hosting-on-github/ "Hugo GitHub Pages"
