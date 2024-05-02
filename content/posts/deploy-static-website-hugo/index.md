@@ -63,7 +63,7 @@ This site is generated using [Hugo][hugo]. Configuration is done using yaml and 
 
 1. Open your browser to [http://localhost:1313](http://localhost:1313)
 
-## Publishing to GitHub Pages
+## Publish to GitHub Pages
 
 Note that there are two URL formats for GitHub Pages:
  - `<username>.github.io` for user or organization sites
@@ -71,15 +71,40 @@ Note that there are two URL formats for GitHub Pages:
 
 If you want to use the first format, the repository you create on GitHub must be named `<username>.github.io`.
 
-Follow [this guide on the Hugo website][hugo-gh] to set up GitHub Pages.
+Follow [the guide on the Hugo website][hugo-gh] to set up GitHub Pages.
+
+## Optional - Use your own domain name
+
+1. Buy a domain name, I used Namecheap
+2. Set up the DNS records to point to your GitHub Pages URL
+    - Log in to Namecheap (or your own domain registrar)
+    - Go to Account -> Dashboard -> Domain List -> Manage -> Advanced DNS -> Add New Record -> A Record
+    - Set the host to `@` and the value to `185.199.108.153`
+    - Repeat for `185.199.109.153`, `185.199.110.153`, and `185.199.111.153`
+    - Add a CNAME record for `www` pointing to `<username>.github.io`
+    - When you're done, it should look like this:
+        | Type     | Host | Value           |
+        | -------- | ---- | --------------- |
+        | A Record | @    | 185.199.108.153 |
+        | A Record | @    | 185.199.109.153 |
+        | A Record | @    | 185.199.110.153 |
+        | A Record | @    | 185.199.111.153 |
+        | CNAME    | www  | g0tmk.github.io |
+3. Wait a few minutes for the DNS records to propagate
+4. Configure the custom domain in GitHub Pages
+    - Log in to GitHub
+    - Go to your repository -> Settings -> Pages -> Custom domain
+    - Enter your domain name and save
+    - If you get an error, wait a few minutes and try again
+5. Load your domain in a browser and check that it works
 
 ## Maintenence
 
-1. Update the theme
+Later on, you can update the theme by running this command in your repository:
 
-    ```bash
-    git submodule update --remote --merge
-    ```
+```bash
+git submodule update --remote --merge
+```
 
 <!-- links -->
 [hugo]: https://gohugo.io/ "Hugo"
