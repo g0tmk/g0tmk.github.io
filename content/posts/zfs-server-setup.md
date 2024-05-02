@@ -150,7 +150,9 @@ Anything modern should work, as long as it has enough SATA slots. I've listed my
     sudo showmount -e localhost
     ```
 
-1. To test mounting the share on another machine, run the following command on the client machine
+## Connect to the share from a client PC
+
+1. To test mounting the share on another machine, run the following command on a client
 
     ```bash
     # install nfs client
@@ -163,10 +165,21 @@ Anything modern should work, as long as it has enough SATA slots. I've listed my
     df -h
     ```
 
-    - If the mount is successful, add this to **/etc/fstab** to make it auto-mount on boot
+    - If the mount is successful, you can add this to **/etc/fstab** to make it auto-mount on boot
 
         ```bash
         SERVERIP:/mnt/ssd-pool/myfiles /mnt/nfs nfs defaults 0 0
         ```
+
+1. If you want to run a speed test, try this from the client PC:
+
+    ```bash
+    dd if=/dev/zero of=/mnt/nfs/testfile bs=1G count=1 oflag=direct
+    ```
+    - **oflag=direct** is used to bypass the filesystem cache and write directly to the disk.
+    
+    ```bash
+    1073741824 bytes (1.1 GB, 1.0 GiB) copied, 42.5806 s, 25.2 MB/s
+    ```
 
 That's it! You now have a DIY NAS that you can expand as needed. It is also easy to add features, like automatic alerts on disk failures, or a Time Machine backup server. I'll cover those in future posts.
